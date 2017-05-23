@@ -10,21 +10,27 @@ const directory = {
 	lists: [
 		{
 			title: "Uzumaki Naruto",
-			content: "Class-S Hokage of Konoha"
+			cards: {
+				text: "Class-S Hokage of Konoha"
+			}
 		},
 		{
 			title: "Uchiha Sasuke",
-			content: "Class-SS Rogue Ninja of Konoha"
+			cards: {
+				text: "Class-SS Rogue Ninja of Konoha"
+			}
 		},
 		{
 			title: "Haruno Sakura",
-			content: "Class-S Medical Ninja of Konoha"
+			cards: {
+				text: "Class-S Medical Ninja of Konoha"
+			}
 		}
 	]
-}
+};
 
 const element = (
-	<Board title="Shinobi Directory" lists={listTitle}/>
+	<Board title={directory.title} lists={directory.lists}/>
 );
 
 ReactDOM.render(
