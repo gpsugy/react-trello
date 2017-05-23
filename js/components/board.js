@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 
 var List = require('./list');
 
-var Board = function(props) {
+function Board(props) {
 	return (
 		<div>
 			<div>{props.title}</div>
