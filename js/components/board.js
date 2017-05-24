@@ -3,13 +3,17 @@ var ReactDOM = require('react-dom');
 
 var List = require('./list');
 
+function buildBoard(lists) {
+	return lists.map((list) =>
+		<List title={list.title} cards={list.cards} />
+	);
+}
+
 function Board(props) {
 	return (
 		<div>
 			<div>Board Title: {props.title}</div>
-			<List title={props.lists[0].title} cards={props.lists[0].cards} />
-			<List title={props.lists[1].title} cards={props.lists[1].cards} />
-			<List title={props.lists[2].title} cards={props.lists[2].cards} />
+			{buildBoard(props.lists)}
 		</div>
 	);
 };
