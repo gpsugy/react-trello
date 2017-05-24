@@ -11,17 +11,17 @@ export class List extends React.Component {
 			title: props.title
 		};
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.onAddInputChanged = this.onAddInputChanged.bind(this);
+		this.onAddSubmit = this.onAddSubmit.bind(this);
 	}
 
-	handleChange(event) {
+	onAddInputChanged(event) {
 		this.setState({value: event.target.value});
 
 		console.log(`Input for LIST: ${this.state.title} changed to: ${event.target.value}`);
 	}
 
-	handleSubmit(event) {
+	onAddSubmit(event) {
 		console.log(`Input for LIST: ${this.state.title} has been submitted.`);
 		event.preventDefault();
 	}
@@ -31,8 +31,8 @@ export class List extends React.Component {
 			<div>
 				<div>List Title: {this.props.title}</div>
 				<Card cards={this.props.cards} />
-				<form onSubmit={this.handleSubmit}>
-					<input type="text" value={this.state.value} onChange={this.handleChange} />
+				<form onSubmit={this.onAddSubmit}>
+					<input type="text" value={this.state.value} onChange={this.onAddInputChanged} />
 					<input type="submit" value="Submit" />
 				</form>
 			</div>
