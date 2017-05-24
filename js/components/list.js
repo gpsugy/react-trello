@@ -6,7 +6,10 @@ var Card = require('./card');
 export class List extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {value: ''};
+		this.state = {
+			value: '',
+			title: props.title
+		};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,11 +18,11 @@ export class List extends React.Component {
 	handleChange(event) {
 		this.setState({value: event.target.value});
 
-		console.log(`Input changed to: ${event.target.value}`);
+		console.log(`Input for LIST: ${this.state.title} changed to: ${event.target.value}`);
 	}
 
 	handleSubmit(event) {
-		console.log(`Input ${this.state.value} has been submitted.`);
+		console.log(`Input for LIST: ${this.state.title} has been submitted.`);
 		event.preventDefault();
 	}
 
