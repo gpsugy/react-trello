@@ -1,9 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var List = require('./list');
 var Card = require('./card');
 
-export class List extends React.Component {
+class ListContainer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -29,16 +30,14 @@ export class List extends React.Component {
 	render() {
 		return (
 			<div>
-				<div>List Title: {this.props.title}</div>
-				<Card cards={this.props.cards} />
-				<form onSubmit={this.onAddSubmit}>
-					<input type="text" value={this.state.value} onChange={this.onAddInputChanged} />
-					<input type="submit" value="Add Card" />
-				</form>
+				hi
 			</div>
+			// {this.props.lists.map((list) =>
+			// 	<List key={list.title} title={list.title} cards={list.cards} />
+			// )}
 		);	
 	}
 };
 
-module.exports = List;
+module.exports = ListContainer;
 

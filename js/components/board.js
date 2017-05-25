@@ -1,14 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var List = require('./list');
+var ListContainer = require('./list-container');
 
 function Board(props) {
 	return (
 		<div>
-			<div>Board Title: {props.title}</div>
+			<h1>Your Board: {props.title}</h1>
 			{props.lists.map((list) =>
-				<List key={list.title} title={list.title} cards={list.cards} />
+				<ListContainer key={list.title} title={list.title} cards={list.cards} />
 			)}
 		</div>
 	);
