@@ -10,21 +10,22 @@ const directory = {
 	lists: [
 		{
 			title: "Uzumaki Naruto",
-			cards: {
-				text: "Class-S Hokage of Konoha"
-			}
+			cards: [
+				"Class-S Hokage of Konoha",
+				"Son: Uzumaki Boruto"
+			]
 		},
 		{
 			title: "Uchiha Sasuke",
-			cards: {
-				text: "Class-SS Rogue Ninja of Konoha"
-			}
+			cards: [
+				"Class-SS Rogue Ninja of Konoha"
+			]
 		},
 		{
 			title: "Haruno Sakura",
-			cards: {
-				text: "Class-S Medical Ninja of Konoha"
-			}
+			cards: [
+				"Class-S Medical Ninja of Konoha"
+			]
 		}
 	]
 };

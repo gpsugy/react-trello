@@ -4,7 +4,9 @@ var ReactDOM = require('react-dom');
 function Card(props) {
 	return (
 		<div className="card">
-			<div>Card Text: {props.cards.text}</div>
+			{props.cards.map((card) =>
+				<h5 key={card}>{card}</h5>
+			)}
 		</div>
 	);
 };
