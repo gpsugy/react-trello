@@ -12,7 +12,7 @@ class List extends React.Component {
 	}
 
 	handleAddInput(e) {
-		console.log(e.target.value);
+		this.props.onAddInputChange(e.target.value);
 	}
 
 	handleSubmit(e) {

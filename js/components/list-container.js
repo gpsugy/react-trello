@@ -11,22 +11,24 @@ class ListContainer extends React.Component {
 			text: ''
 		};
 
-		this.onAddInputChanged = this.onAddInputChanged.bind(this);
-		this.onAddSubmit = this.onAddSubmit.bind(this);
+		this.onAddInputChange = this.onAddInputChange.bind(this);
+		this.onSubmitForm = this.onSubmitForm.bind(this);
 	}
 
-	onAddInputChanged(e) {
-		this.setState({value: e.target.value});
+	onAddInputChange(cardText) {
+		this.setState({text: cardText});
 	}
 
-	onAddSubmit(e) {
+	onSubmitForm(e) {
+
 		e.preventDefault();
 	}
 
 	render() {
 		return (
 			<div>
-				<List title={this.props.title} cards={this.state.cards} inputText={this.state.text}/>
+				<List title={this.props.title} cards={this.state.cards} inputText={this.state.text}
+					onAddInputChange={this.onAddInputChange} onSubmitForm={this.onSubmitForm}/>
 			</div>
 		);	
 	}
