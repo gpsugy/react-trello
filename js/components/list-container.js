@@ -19,9 +19,12 @@ class ListContainer extends React.Component {
 		this.setState({text: cardText});
 	}
 
-	onSubmitForm(e) {
-
-		e.preventDefault();
+	onSubmitForm() {
+		this.setState({
+			// ALWAYS use setState and NEVER directly modify state. concat returns a new array
+			cards: this.state.cards.concat(this.state.text),
+			text: ''
+		});
 	}
 
 	render() {

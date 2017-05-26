@@ -16,14 +16,14 @@ class List extends React.Component {
 	}
 
 	handleSubmit(e) {
-		console.log(e.target.value);
+		this.props.onSubmitForm();
 		e.preventDefault();
 	}
 
 	render() {
 		return (
 			<div>
-				<h3>List: {this.props.title}</h3>
+				<h3>{this.props.title}</h3>
 				<Card cards={this.props.cards} />
 				<form onSubmit={this.handleSubmit}>
 					<input type="text" value={this.props.inputText} onChange={this.handleAddInput} />
